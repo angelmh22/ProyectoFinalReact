@@ -8,18 +8,18 @@ import Table from 'react-bootstrap/Table';
 import { getPerson } from '../services/people';
 
 export async function loader({ params }) {
-  const person = await getPerson(params.peopleId);
-  if (!person) {
+  const personaje = await getPersonaje(params.personajesId);
+  if (!personaje) {
     throw new Response('', {
       status: 404,
       statusText: 'Not Found',
     });
   }
-  return person;
+  return personaje;
 }
 
-export default function FindPeople() {
-  const person = useLoaderData();
+export default function BuscaPersonaje() {
+  const personaje = useLoaderData();
 
   return (
     <div id="contenedor">
@@ -27,8 +27,8 @@ export default function FindPeople() {
         <div className="row">
           <div className="col-md-6">
             <img
-              key={person.id}
-              src={person.image.medium || null}
+              key={personaje.id}
+              src={personaje.image.medium || null}
               alt=""
             />
           </div>
@@ -44,19 +44,19 @@ export default function FindPeople() {
                   <tbody>
                     <tr>
                       <td>Nombre</td>
-                      <td>{person.name}</td>
+                      <td>{personaje.name}</td>
                     </tr>
                     <tr>
                       <td>Genero</td>
-                      <td>{person.gender}</td>
+                      <td>{personaje.gender}</td>
                     </tr>
                     <tr>
                       <td>Pais</td>
-                      <td>{person.country.name}</td>
+                      <td>{personaje.country.name}</td>
                     </tr>
                     <tr>
                       <td>Fecha de Nacimiento</td>
-                      <td>{person.birthday}</td>
+                      <td>{personaje.birthday}</td>
                     </tr>
                   </tbody>
                 </Table>

@@ -5,21 +5,21 @@ import {
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Table from 'react-bootstrap/Table';
-import { getSingleEpisode } from '../services/episodes';
+import { getPelicula } from '../services/peliculas';
 
 export async function loader({ params }) {
-  const episode = await getSingleEpisode(params.episodeId);
-  if (!episode) {
+  const pelicula = await getPelicula(params.episodeId);
+  if (!pelicula) {
     throw new Response('', {
       status: 404,
       statusText: 'Not Found',
     });
   }
-  return episode;
+  return pelicula;
 }
 
-export default function FindEpisode() {
-  const episode = useLoaderData();
+export default function BuscaPelicula() {
+  const pelicula = useLoaderData();
 
   return (
     <div className="contenedor">
@@ -27,8 +27,8 @@ export default function FindEpisode() {
         <div className="row">
           <div className="col-md-6">
             <img
-              key={episode.id}
-              src={episode.image.medium || null}
+              key={pelicula.id}
+              src={pelicula.image.medium || null}
               alt=""
             />
           </div>
@@ -44,25 +44,25 @@ export default function FindEpisode() {
                   <tbody>
                     <tr>
                       <td>Nombre</td>
-                      <td>{episode.name}</td>
+                      <td>{pelicula.name}</td>
                     </tr>
                     <tr>
                       <td>Temporada</td>
-                      <td>{episode.season}</td>
+                      <td>{pelicula.season}</td>
                     </tr>
                     <tr>
                       <td>Episodio</td>
-                      <td>{episode.number}</td>
+                      <td>{pelicula.number}</td>
                     </tr>
                     <tr>
                       <td>Valoracion</td>
-                      <td>{episode.rating.average}</td>
+                      <td>{pelicula.rating.average}</td>
                     </tr>
                   </tbody>
                 </Table>
               </Tab>
               <Tab eventKey="resumen" title="Resumen">
-                <div dangerouslySetInnerHTML={{ __html: episode.summary }} />
+                <div dangerouslySetInnerHTML={{ __html: pelicula.summary }} />
               </Tab>
             </Tabs>
 

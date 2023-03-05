@@ -1,13 +1,13 @@
 const URL = 'https://api.tvmaze.com/people'; // hay q cambiarlo
 
-export async function getPeople() {
+export async function getPersonajes() {
   const respuesta = await fetch(`${URL}`);
-  const personas = await respuesta.json();
-  return personas;
+  const personajes = await respuesta.json();
+  return personajes;
 }
 
-export async function getPerson(id) {
+export async function getPersonaje(id) {
   const respuesta = await fetch(`${URL}/${id}`);
-  const person = await respuesta.json();
-  return person;
+  const personaje = await respuesta.json();
+  return personaje;
 }

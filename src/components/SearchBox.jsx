@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import '../style.css';
 import PropTypes from 'prop-types';

@@ -26,14 +26,14 @@ function BarraNavegacion() {
               <Button variant="outline-primary" className="boton">Inicio</Button>
             </NavLink>
             <NavLink
-              to="/shows"
+              to="/personajes"
             >
-              <Button variant="outline-primary" className="boton">Shows</Button>
+              <Button variant="outline-primary" className="boton">Personajes</Button>
             </NavLink>
             <NavLink
-              to="/people"
+              to="/peliculas"
             >
-              <Button variant="outline-primary" className="boton">People</Button>
+              <Button variant="outline-primary" className="boton">Peliculas</Button>
             </NavLink>
           </Nav>
         </Navbar.Collapse>

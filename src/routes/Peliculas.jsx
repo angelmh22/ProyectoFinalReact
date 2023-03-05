@@ -4,18 +4,18 @@ import {
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import Card from 'react-bootstrap/Card';
-import getEpisodes from '../services/episodes';
 import '../style.css';
+import getPeliculas from '../services/peliculas';
 
 export async function loader({ params }) {
-  const episodes = await getEpisodes(params.showId);
-  if (!episodes) {
+  const peliculas = await getPeliculas(params.showId);
+  if (!peliculas) {
     throw new Response('', {
       status: 404,
       statusText: 'Not Found',
     });
   }
-  return episodes;
+  return peliculas;
 }
 
 export default function FindShow() {
