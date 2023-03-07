@@ -2,13 +2,18 @@ import React from 'react';
 
 function Home() {
   return (
-    <div className="row">
-      <div className="col-md-6">
-        <h2 className="text-center">PELICULAS</h2>
+    <div className="div">
+      <div className="text-center" id="bg-image">
+        <div className="mask" id="mask">
+          <div className="d-flex justify-content-center align-items-center h-100">
+            <div className="text-white">
+              <h1 className="mb-3">DISNEY</h1>
+              <h1>BIENVENIDO A NUESTRA API DE DISNEY</h1>
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="col-md-6">
-        <h2 className="text-center">PERSONAJES</h2>
-      </div>
+
     </div>
   );
 }

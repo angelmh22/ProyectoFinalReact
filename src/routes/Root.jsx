@@ -1,14 +1,23 @@
-import { Outlet } from 'react-router-dom';
 import React from 'react';
-import BarraNavegacion from '../components/Navbar';
-import '../index.css';
-import '../style.css';
+import { Route, Routes } from 'react-router-dom';
+import Peliculas from '../components/Peliculas';
+import Home from '../components/Home';
+import Navbar from '../components/NavBar';
+import Personajes from '../components/Personajes';
+import ErrorPage from '../components/Error-page';
+import Footer from '../components/Footer';
 
 function Root() {
   return (
     <>
-      <BarraNavegacion />
-      <Outlet />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/peliculas" element={<Peliculas />} />
+        <Route path="/personajes" element={<Personajes />} />
+        <Route path="/error" element={<ErrorPage />} />
+      </Routes>
+      <Footer />
     </>
   );
 }

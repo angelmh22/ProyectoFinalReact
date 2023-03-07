@@ -1,77 +1,105 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
-import '../footer.css';
+import imgLogo from '../img/logo.png';
 
 function Footer() {
   return (
-    <>
-      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-      <footer className="footer_area section_padding_130_0">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-sm-6 col-lg-4">
-              <div className="single-footer-widget section_padding_0_130">
-                <div className="footer-logo mb-3" />
-                <img src="src/img/tvm-header-logo.png" alt="logo" />
-                <br />
-                <br />
-                <p>Página realizada a través de la api de Disney</p>
-                <div className="footer_social_area">
-                  <a href="https://es-es.facebook.com/" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"><i className="fa fa-facebook" /></a>
-                  <a href="https://www.pinterest.es/" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest"><i className="fa fa-pinterest" /></a>
-                  <a href="https://www.skype.com/es/" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype"><i className="fa fa-skype" /></a>
-                  <a href="https://twitter.com/" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter"><i className="fa fa-twitter" /></a>
-                </div>
-              </div>
+
+    <div className="text-center text-lg-start bg-negro border-foot text-light">
+      <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <div className="container text-center ">
+          <a className="btn text-white btn-floating btn-circle btn-foot bg-facebook mx-3" href="#!">
+            <i className="fab fa-facebook " />
+          </a>
+          <a className="btn text-white btn-floating btn-circle btn-foot bg-twitter mx-3" href="#!">
+            <i className="fab fa-twitter" />
+          </a>
+          <a className="btn text-white btn-floating btn-circle btn-foot bg-google mx-3" href="#!">
+            <i className="fab fa-google" />
+          </a>
+          <a className="btn text-white btn-floating btn-circle btn-foot bg-instagram mx-3" href="#!">
+            <i className="fab fa-instagram" />
+          </a>
+          <a className="btn text-white btn-floating btn-circle btn-foot bg-linkedin mx-3" href="#!">
+            <i className="fab fa-linkedin-in" />
+          </a>
+          <a className="btn text-white btn-floating btn-circle btn-foot bg-github mx-3" href="#!">
+            <i className="fab fa-github" />
+          </a>
+        </div>
+      </section>
+
+      <section className="">
+        <div className="container text-center text-md-start mt-5">
+          <div className="row mt-3">
+            <div className="col-md-3 col-lg-4 col-xl-3 ml-0 mb-4">
+              <h6 className="text-uppercase fw-bold mb-4">
+                <img src={imgLogo} alt="" width="150" height="70" />
+              </h6>
+
             </div>
-            <div className="col-12 col-sm-6 col-lg">
-              <div className="single-footer-widget section_padding_0_130">
-                <h5 className="widget-title">Sobre Nosotros</h5>
-                <div className="footer_menu">
-                  <ul>
-                    <li><strong>Integrantes:</strong></li>
-                    <br />
-                    <li>Ángel Martínez</li>
-                    <br />
-                    <li>Sara Escobar</li>
-                    <br />
-                    <li>Cristina Alcántara</li>
-                    <br />
-                    <li>Jorge Ramírez</li>
-                  </ul>
-                </div>
-              </div>
+            <div className="col-md-3 col-lg-2 col-xl-2 mr-5 mb-4">
+              <h6 className="text-uppercase fw-bold mb-4">
+                Paginas legales
+              </h6>
+              <p>
+                <a href="paginaslegales.html" className="text-reset text-decoration-none">Aviso legal</a>
+              </p>
+              <p>
+                <a href="paginaslegales.html" className="text-reset text-decoration-none">Política de privacidad</a>
+              </p>
+              <p>
+                <a href="paginaslegales.html" className="text-reset text-decoration-none">Política de cookies</a>
+              </p>
             </div>
-            <div className="col-12 col-sm-6 col-lg">
-              <div className="single-footer-widget section_padding_0_130">
-                <h5 className="widget-title">Soporte</h5>
-                <div className="footer_menu">
-                  <ul>
-                    <li><a href="#">Ayuda</a></li>
-                    <li><a href="#">Soporte</a></li>
-                    <li><a href="#">Política de privacidad</a></li>
-                    <li><a href="#">Términos &amp; Condiciones</a></li>
-                  </ul>
-                </div>
-              </div>
+            <div className="col-md-2 col-lg-2 col-xl-2 mr-5 mb-4">
+              <h6 className="text-uppercase fw-bold mb-4">
+                Productos
+              </h6>
+              <p>
+                <a href="https://angular.io/" className="text-reset text-decoration-none">Series</a>
+              </p>
+              <p>
+                <a href="https://es.reactjs.org/" className="text-reset text-decoration-none">Juguetes</a>
+              </p>
+              <p>
+                <a href="https://vuejs.org/" className="text-reset text-decoration-none">Videojuegos</a>
+              </p>
+              <p>
+                <a href="https://laravel.com/" className="text-reset text-decoration-none">Películas</a>
+              </p>
             </div>
-            <div className="col-12 col-sm-6 col-lg">
-              <div className="single-footer-widget section_padding_0_130">
-                <h5 className="widget-title">Contacto</h5>
-                <div className="footer_menu">
-                  <ul>
-                    <li><a href="#">IES Azarquiel</a></li>
-                    <li><a href="https://www.google.com/intl/es/gmail/about/">Email</a></li>
-                    <li><a href="#">Términos &amp; Condiciones</a></li>
-                  </ul>
-                </div>
-              </div>
+            <div className="col-md-4 col-lg-3 col-xl-3 mb-md-0 mb-4 mr-5">
+              <h6 className="text-uppercase fw-bold mb-4">Contacto</h6>
+              <p>
+                <i className="fas fa-home me-3 text-secondary" />
+                {' '}
+                toeldo
+              </p>
+              <p>
+                <i className="fas fa-envelope me-3 text-secondary" />
+                info@example.com
+              </p>
+              <p>
+                <i className="fas fa-phone me-3 text-secondary" />
+                {' '}
+                +34 925 234 837
+              </p>
+              <p>
+                <i className="fas fa-print me-3 text-secondary" />
+                {' '}
+                +34 925 234 837
+              </p>
             </div>
           </div>
         </div>
-      </footer>
-    </>
+      </section>
+      <div className="text-center p-4">
+        <p>
+          © 2022 Copyright:
+          <a className="text-reset fw-bold text-decoration-none" href="https://api.disneyapi.dev"> disney.com</a>
+        </p>
+      </div>
+    </div>
   );
 }
 

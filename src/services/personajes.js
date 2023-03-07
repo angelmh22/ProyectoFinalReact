@@ -1,13 +1,18 @@
-const URL = 'https://api.tvmaze.com/people'; // hay q cambiarlo
+import { useState, useEffect } from 'react';
 
-export async function getPersonajes() {
-  const respuesta = await fetch(`${URL}`);
-  const personajes = await respuesta.json();
-  return personajes;
-}
+const personajesUrl = 'http://api.disneyapi.dev/characters';
 
-export async function getPersonaje(id) {
-  const respuesta = await fetch(`${URL}/${id}`);
-  const personaje = await respuesta.json();
-  return personaje;
-}
+const [personajes, setPersonajes] = useState([]);
+
+const fetchPersonajes = (personajesUrl) => {
+  fetch(personajesUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      setPersonajes(data.data.results);
+    })
+    .catch((error) => console.log(error));
+};
+
+useEffect(() => {
+  fetchPersonajes(personajesUrl);
+}, []);

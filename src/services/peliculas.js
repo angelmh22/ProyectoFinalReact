@@ -1,14 +1,18 @@
-const URL = 'https://api.tvmaze.com/shows'; // hay q cambiarlo
-const URL1 = 'https://api.tvmaze.com/episodes'; // hay q cambiarlo
+import { useState, useEffect } from 'react';
 
-export default async function getPeliculas(id) {
-  const respuesta = await fetch(`${URL}/${id}/episodes`);
-  const peliculas = await respuesta.json();
-  return peliculas;
-}
+const peliculasUrl = 'http://api.disneyapi.dev/characters?films';
 
-export async function getPelicula(id) {
-  const respuesta = await fetch(`${URL1}/${id}`);
-  const pelicula = await respuesta.json();
-  return pelicula;
-}
+const [peliculas, setPeliculas] = useState([]);
+
+const fetchPeliculas = (peliculasUrl) => {
+  fetch(peliculasUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      setPeliculas(data.data.results);
+    })
+    .catch((error) => console.log(error));
+};
+
+useEffect(() => {
+  fetchPeliculas(peliculasUrl);
+}, []);
