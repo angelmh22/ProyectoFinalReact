@@ -7,8 +7,7 @@ function Home() {
         <div className="mask" id="mask">
           <div className="d-flex justify-content-center align-items-center h-100">
             <div className="text-white">
-              <h1 className="mb-3">DISNEY</h1>
-              <h1>BIENVENIDO A NUESTRA API DE DISNEY</h1>
+              <h1 className="titulo">BIENVENIDO A NUESTRA API DE DISNEY</h1>
             </div>
           </div>
         </div>

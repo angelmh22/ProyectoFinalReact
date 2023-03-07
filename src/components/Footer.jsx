@@ -51,51 +51,12 @@ function Footer() {
                 <a href="paginaslegales.html" className="text-reset text-decoration-none">Política de cookies</a>
               </p>
             </div>
-            <div className="col-md-2 col-lg-2 col-xl-2 mr-5 mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">
-                Productos
-              </h6>
-              <p>
-                <a href="https://angular.io/" className="text-reset text-decoration-none">Series</a>
-              </p>
-              <p>
-                <a href="https://es.reactjs.org/" className="text-reset text-decoration-none">Juguetes</a>
-              </p>
-              <p>
-                <a href="https://vuejs.org/" className="text-reset text-decoration-none">Videojuegos</a>
-              </p>
-              <p>
-                <a href="https://laravel.com/" className="text-reset text-decoration-none">Películas</a>
-              </p>
-            </div>
-            <div className="col-md-4 col-lg-3 col-xl-3 mb-md-0 mb-4 mr-5">
-              <h6 className="text-uppercase fw-bold mb-4">Contacto</h6>
-              <p>
-                <i className="fas fa-home me-3 text-secondary" />
-                {' '}
-                toeldo
-              </p>
-              <p>
-                <i className="fas fa-envelope me-3 text-secondary" />
-                info@example.com
-              </p>
-              <p>
-                <i className="fas fa-phone me-3 text-secondary" />
-                {' '}
-                +34 925 234 837
-              </p>
-              <p>
-                <i className="fas fa-print me-3 text-secondary" />
-                {' '}
-                +34 925 234 837
-              </p>
-            </div>
           </div>
         </div>
       </section>
       <div className="text-center p-4">
         <p>
-          © 2022 Copyright:
+          © 2023 Copyright:
           <a className="text-reset fw-bold text-decoration-none" href="https://api.disneyapi.dev"> disney.com</a>
         </p>
       </div>

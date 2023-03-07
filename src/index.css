@@ -3,20 +3,19 @@
   background-size: cover;
   height: 600px;
 }
-#mask {
-  background-color: blue;
-  width: 100%;
-  height: 600px;
+.titulo {
+  text-align: center;
+  background-color: white;
 }
 
 .ul-nav {
   list-style-type: none;
   overflow: hidden;
-  text-align: left;
+  text-align: center;
 }
 
 .li-nav {
-  float: left;
+  float: right;
 }
 
 .li-nav-navlink {
@@ -26,8 +25,8 @@
   text-decoration: none;
 }
 
-.bg-rojomarvel {
-  background-color: #ED1C24;
+.bg-disney {
+  background-color: #035297;
 }
 
 .third {
@@ -42,7 +41,7 @@
 }
 
 .bg-negro {
-  background-color: red;
+  background-color: #035297;
 }
 
 .border-foot {
