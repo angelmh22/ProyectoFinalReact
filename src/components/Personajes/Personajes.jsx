@@ -23,7 +23,7 @@ function Personajes() {
           <div className="col-3 d-flex flex-wrap">
             <NavLink to={`${character.id}`} className="d-flex link-css">
               <div className="card shadow mt-4 text-center">
-                <img src={`${character.imageUrl}.`} width="300px" height="300px" alt="#" />
+                <img src={`${character.imageUrl}`} width="300px" height="300px" alt="#" />
                 <h4 className="card-title my-3">{character.name}</h4>
               </div>
             </NavLink>
