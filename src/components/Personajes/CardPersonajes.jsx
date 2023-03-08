@@ -21,12 +21,12 @@ function CardPersonajes() {
     <div className="card text-left card-css shadow my-5">
       <div className="row">
         <div className="col-6">
-          <img className="card-img-top img-fluid" src={`${personaje.thumbnail.path}.${personaje.thumbnail.extension}`} height="300px" alt="#" />
+          <img className="card-img-top img-fluid" src={`${personaje.imageUrl}`} height="300px" alt="#" />
         </div>
         <div className="col-6">
           <div className="card-body">
             <h4 className="card-title">{personaje.name}</h4>
-            <p className="card-text">{personaje.description}</p>
+            <p className="card-text">{personaje.films}</p>
           </div>
         </div>
       </div>

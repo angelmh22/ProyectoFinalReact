@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Peliculas from '../components/Peliculas';
 import Home from '../components/Home';
 import Navbar from '../components/NavBar';
-import Personajes from '../components/Personajes';
+import Personajes from '../components/Personajes/Personajes';
 import ErrorPage from '../components/Error-page';
 import Footer from '../components/Footer';
 
@@ -15,7 +15,7 @@ function Root() {
         <Route path="/" element={<Home />} />
         <Route path="/peliculas" element={<Peliculas />} />
         <Route path="/personajes" element={<Personajes />} />
-        <Route path="/error" element={<ErrorPage />} />
+        <Route path="/*" element={<ErrorPage />} />
       </Routes>
       <Footer />
     </>
