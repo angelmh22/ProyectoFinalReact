@@ -15,20 +15,6 @@ function Footer() {
               </h6>
 
             </div>
-            <div className="col-md-3 col-lg-2 col-xl-2 mr-5 mb-4">
-              <h6 className="text-uppercase fw-bold mb-4">
-                Paginas legales
-              </h6>
-              <p>
-                <a href="paginaslegales.html" className="text-reset text-decoration-none">Aviso legal</a>
-              </p>
-              <p>
-                <a href="paginaslegales.html" className="text-reset text-decoration-none">Política de privacidad</a>
-              </p>
-              <p>
-                <a href="paginaslegales.html" className="text-reset text-decoration-none">Política de cookies</a>
-              </p>
-            </div>
           </div>
         </div>
       </section>

@@ -11,8 +11,9 @@ import { getPersonajes } from '../../services/personajes';
 import '../../index.css';
 
 function Personajes() {
-  const [personajes, setPersonajes] = useState([]); // se guarda la funcion que cambia personajes
-  // personajes que son el resultados de la busqueda
+  // se guarda la función para cambiar los personajes
+  const [personajes, setPersonajes] = useState([]);
+  // personajes que son el resultado de la busqueda
   const [personajesFiltrados, setPersonajesFiltrados] = useState([]);
 
   // se ejecuta cuando abres la pagina
@@ -26,14 +27,15 @@ function Personajes() {
   }, []);
 
   // handleChange se ejecuta cuando escribimos algo nuevo en el buscador
-  // se actualiza el estado
+  // el cual sirve para actualizar el estado
   const handleChange = (event) => {
-    // filtramos todos los personajes comparando su nombre con lo que escribimos en el buscador
+    // filtramos todos los personajes comparando su nombre con el que escribimos en el buscador
     const personajesResultado = personajes.filter((personaje) => personaje.name.toUpperCase().includes(event.target.value.toUpperCase()));
     // cargamos los resultados de la busqueda en la variable de personajesFiltrados
     setPersonajesFiltrados(personajesResultado);
   };
 
+  // si todo ha ido bien nos retornará los personajes con el nombre y la imagen
   return (
     <div className="container mb-4">
       <div className="row">
