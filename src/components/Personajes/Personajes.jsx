@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable max-len */
 // useState es una función que crea internamente una variable
 // donde podremos almacenar el estado de nuestro componente
 import React, { useState, useEffect } from 'react';
@@ -9,28 +11,35 @@ import { getPersonajes } from '../../services/personajes';
 import '../../index.css';
 
 function Personajes() {
-  // declaramos el useState con un valor incial
-  // para esa variable y devuelve un array con dos elementos
-  // el valor de la variable y la función para modificarla
-  const [personajes, setPersonajes] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [personajes, setPersonajes] = useState([]); // se guarda la funcion que cambia personajes
+  // personajes que son el resultados de la busqueda
+  const [personajesFiltrados, setPersonajesFiltrados] = useState([]);
 
+  // se ejecuta cuando abres la pagina
   useEffect(() => {
-    getPersonajes().then((characters) => setPersonajes(characters.data));
+    // obtenemos los personajes de la api
+    getPersonajes().then((characters) => {
+    // cargamos los personajes en la variable PersonajesFiltrados
+      setPersonajes(characters.data);
+      setPersonajesFiltrados(characters.data);
+    });
   }, []);
 
-  // el handleChange se utiliza para actualizar el estado
-  // será actualizado mientras escribimos (input)
+  // handleChange se ejecuta cuando escribimos algo nuevo en el buscador
+  // se actualiza el estado
   const handleChange = (event) => {
-    setSearchTerm(event.target.value);
+    // filtramos todos los personajes comparando su nombre con lo que escribimos en el buscador
+    const personajesResultado = personajes.filter((personaje) => personaje.name.toUpperCase().includes(event.target.value.toUpperCase()));
+    // cargamos los resultados de la busqueda en la variable de personajesFiltrados
+    setPersonajesFiltrados(personajesResultado);
   };
 
   return (
     <div className="container mb-4">
       <div className="row">
-        <input type="text" placeholder="Busca un Personaje" className="form-control mt-4" value={searchTerm} onChange={handleChange} />
-        {personajes.map((character) => (
-          <div className="col-3 d-flex flex-wrap">
+        <input type="text" placeholder="Busca un Personaje" className="form-control mt-4" onChange={handleChange} />
+        {personajesFiltrados.map((character, key) => (
+          <div id={key} className="col-3 d-flex flex-wrap">
             <NavLink to={`${character.id}`} className="d-flex link-css">
               <div className="card shadow mt-4 text-center">
                 <img src={`${character.imageUrl}`} width="300px" height="300px" alt="#" />

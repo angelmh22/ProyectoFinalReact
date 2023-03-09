@@ -1,28 +1,38 @@
-#bg-image-disney {
+#bg-image {
   background-image: url(img/fondoDisney.webp);
   background-size: cover;
   height: 600px;
 }
-.tittle {
+
+.titulo {
   text-align: center;
   background-color: white;
 }
 
 .ul-nav {
   list-style-type: none;
-  overflow: hidden;
   text-align: center;
 }
 
 .li-nav {
-  float: right;
+  float: center;
+  font: 2em sans-serif;
+  margin-top: 15px;
 }
 
 .li-nav-navlink {
-  display: block;
   color: white;
   text-align: center;
   text-decoration: none;
+
+}
+
+.form-control {
+  text-align: center;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  margin-left: 35%;
+  font-size: xx-large;
 }
 
 .bg-disney {
@@ -30,41 +40,18 @@
 }
 
 .third {
-  border-color: #b90000;
+  border-color: #000000;
   color: #fff;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 
 .third:hover {
-  box-shadow: 0 0 10px 0 #b90000 inset, 0 0 10px 4px #b90000;
+  box-shadow: 0 0 10px 0 #000000 inset, 0 0 10px 4px #b90000;
 }
 
 .bg-negro {
   background-color: #035297;
-}
-
-.border-foot {
-  border-top: 1px solid white;
-}
-
-.bg-facebook {
-  background-color: #3b5998
-}
-.bg-twitter {
-  background-color: #55acee
-}
-.bg-google {
-  background-color: #dd4b39
-}
-.bg-instagram {
-  background-color: #ac2bac
-}
-.bg-linkedin {
-  background-color: #0082ca
-}
-.bg-github {
-  background-color: #333333
 }
 
 .btn-circle.btn-foot {
@@ -74,11 +61,4 @@
   border-radius: 30px;
   font-size: 20px;
   text-align: center;
-}
-
-.scroll {
-  width: 100%;
-  height: auto;
-  overflow: scroll;
-  overflow-x: hidden;
 }
