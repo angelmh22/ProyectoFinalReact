@@ -8,6 +8,7 @@ import Navbar from '../components/NavBar';
 import Personajes from '../components/Personajes/Personajes';
 import ErrorPage from '../components/Error-page';
 import Footer from '../components/Footer';
+import Personaje from '../components/Personajes/Personaje';
 
 function Root() {
   return (
@@ -17,7 +18,8 @@ function Root() {
         <Route path="/" element={<Home />} />
         <Route path="/peliculas" element={<Peliculas />} />
         <Route path="/personajes" element={<Personajes />} />
-        <Route path="/*" element={<ErrorPage />} />
+        <Route path="/personajes/:id_personaje" element={<Personaje />} />
+        <Route errorElement={<ErrorPage />} />
       </Routes>
       <Footer />
     </>
