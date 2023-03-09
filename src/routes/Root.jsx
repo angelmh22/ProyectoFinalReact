@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 // importamos todos los componentes que hemos realizado
 // en la carpeta componentes
-import Peliculas from '../components/Peliculas';
+import Peliculas from '../components/Peliculas/Peliculas';
 import Home from '../components/Home';
 import Navbar from '../components/NavBar';
 import Personajes from '../components/Personajes/Personajes';
