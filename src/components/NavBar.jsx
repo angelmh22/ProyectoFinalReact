@@ -1,4 +1,5 @@
 import React from 'react';
+// nos permite crear enlaces de navegación dentro de nuestra aplicación
 import { NavLink } from 'react-router-dom';
 import ImgHeader from '../img/logo.png';
 import '../index.css';

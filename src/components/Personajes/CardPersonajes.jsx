@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
+// nos permite acceder desde un componente a los parámetros de la ruta
 import { useParams } from 'react-router-dom';
 import { getPersonaje } from '../../services/personajes';
 import '../../index.css';
 
 function CardPersonajes() {
+  // aqui guardamos su valor dentro de una variable
+  // este valor nunca cambia por eso la ponemos con const
   const { personajeId } = useParams();
   const [personaje, setPersonaje] = useState();
 
+  // es usado para la inicialización de variables,
+  // llamadas a APIs o para limpiar un componente antes de desmontarlo del DOM
   useEffect(() => {
-    setPersonaje(personajeId).then((result) => {
-      setPersonaje(result.data.results[0]);
+    getPersonaje(personajeId).then((characters) => {
+      setPersonaje(characters.data[0]);
     });
   }, [personajeId]);
 

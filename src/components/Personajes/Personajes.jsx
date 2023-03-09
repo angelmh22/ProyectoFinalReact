@@ -1,9 +1,17 @@
+// useState es una función que crea internamente una variable
+// donde podremos almacenar el estado de nuestro componente
 import React, { useState, useEffect } from 'react';
+// nos permite crear enlaces de navegación dentro de nuestra aplicación
 import { NavLink } from 'react-router-dom';
+// nos da todos los personajes de la api
 import { getPersonajes } from '../../services/personajes';
+// incorporamos el estilo de la index
 import '../../index.css';
 
 function Personajes() {
+  // declaramos el useState con un valor incial
+  // para esa variable y devuelve un array con dos elementos
+  // el valor de la variable y la función para modificarla
   const [personajes, setPersonajes] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -11,6 +19,8 @@ function Personajes() {
     getPersonajes().then((characters) => setPersonajes(characters.data));
   }, []);
 
+  // el handleChange se utiliza para actualizar el estado
+  // será actualizado mientras escribimos (input)
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
   };

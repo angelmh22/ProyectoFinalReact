@@ -1,15 +1,15 @@
-const URL = 'http://gateway.marvel.com/v1/public/series?&ts=1&apikey=ad6ea905acb56b4f31146d812a2568a1&hash=e666c45f929cb194ce2111c743dc3ff9';
+const urlPeliculas = 'http://api.disneyapi.dev/characters?films=name';
 
-const urlCharacters = 'http://gateway.marvel.com/v1/public/series';
-
+// con esta función obtenemos todas las películas
 export async function getPeliculas() {
-  const respuesta = await fetch(`${URL}`);
+  const respuesta = await fetch(`${urlPeliculas}`);
   const peliculas = await respuesta.json();
   return peliculas;
 }
 
+// con esta función obtenemos una pelicula sola con su id correspondiente
 export async function getPelicula(id) {
-  const respuesta = await fetch(`${urlCharacters}/${id}`);
+  const respuesta = await fetch(`${urlPeliculas}/${id}`);
   const pelicula = await respuesta.json();
   return pelicula;
 }

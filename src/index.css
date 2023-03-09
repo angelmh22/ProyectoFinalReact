@@ -1,9 +1,9 @@
-#bg-image {
+#bg-image-disney {
   background-image: url(img/fondoDisney.webp);
   background-size: cover;
   height: 600px;
 }
-.titulo {
+.tittle {
   text-align: center;
   background-color: white;
 }
