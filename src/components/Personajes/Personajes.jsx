@@ -39,13 +39,13 @@ function Personajes() {
   // si todo ha ido bien nos retornará los personajes con el nombre y la imagen
   return (
     <div className="container">
-      <input type="text" placeholder="Busca un Personaje" onChange={handleChange} />
+      <input id="buscador" type="text" placeholder="Busca un Personaje" onChange={handleChange} />
       <div className="row">
         {personajesFiltrados.map((character, key) => (
           <div id={key} className="col">
             <NavLink to={`${character._id}`}>
               <div>
-                <h4>{character.name}</h4>
+                <h4 id="nombre-personaje">{character.name}</h4>
                 <Link to={`${character._id}`}>
                   <img src={`${character.imageUrl}`} width="300px" height="300px" alt="#" />
                 </Link>

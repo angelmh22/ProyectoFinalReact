@@ -38,7 +38,7 @@ function Peliculas() {
   return (
     <div className="container">
       <div className="row">
-        <input type="text" placeholder="Busca una Pelicula" onChange={handleChange} />
+        <input id="buscador" type="text" placeholder="Busca una Pelicula" onChange={handleChange} />
         {peliculasFiltradas.map((film, key) => (
           <div id={key}>
             <NavLink to={`${film.id}`}>
