@@ -1,4 +1,5 @@
-const urlPeliculas = 'http://api.disneyapi.dev/character';
+const urlPeliculas = 'http://api.disneyapi.dev/characters?films';
+const urlPelicula = 'http://api.disneyapi.dev/character?films';
 
 // con esta función obtenemos todas las películas
 export async function getPeliculas() {
@@ -7,9 +8,9 @@ export async function getPeliculas() {
   return peliculas;
 }
 
-// con esta función obtenemos una pelicula sola con su id correspondiente
-export async function getPelicula(film) {
-  const respuesta = await fetch(`${urlPeliculas}?films=${film}`);
+// con esta función obtenemos una pelicula sola con su name correspondiente
+export async function getPelicula(name) {
+  const respuesta = await fetch(`${urlPelicula}=${name}`);
   const pelicula = await respuesta.json();
   return pelicula;
 }

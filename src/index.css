@@ -17,7 +17,7 @@
 }
 
 .li-nav {
-  float: center;
+  float: left;
   font: 2em sans-serif;
   margin-top: 15px;
 }
@@ -71,4 +71,13 @@
   margin-bottom: 50px;
   border-color: #035297;
   border-radius: 5px;
+}
+
+#carac-personaje {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#c-personaje {
+  text-align: left;
 }

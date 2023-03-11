@@ -3,7 +3,7 @@
 // donde podremos almacenar el estado de nuestro componente
 import React, { useState, useEffect } from 'react';
 // nos permite crear enlaces de navegación dentro de nuestra aplicación
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 // nos da todos los personajes de la api
 import { getPeliculas } from '../../services/peliculas';
 // incorporamos el estilo de la index
@@ -34,17 +34,20 @@ function Peliculas() {
     setPeliculasFiltradas(peliculasResultado);
   };
 
-  // si todo ha ido bien nos retornará los personajes con el nombre y la imagen
+  // si todo ha ido bien nos retornará las películas con el nombre y la imagen
   return (
     <div className="container">
+      <input id="buscador" type="text" placeholder="Busca una Pelicula" onChange={handleChange} />
       <div className="row">
-        <input id="buscador" type="text" placeholder="Busca una Pelicula" onChange={handleChange} />
         {peliculasFiltradas.map((film, key) => (
-          <div id={key}>
+          <div id={key} className="col">
             <NavLink to={`${film.id}`}>
               <div>
-                <img src={`${film.imageUrl}`} width="300px" height="300px" alt="#" />
                 <h4 className="card-title my-3">{film.name}</h4>
+                <Link to={`${film.name}`}>
+                  <img src={`${film.imageUrl}`} width="300px" height="300px" alt="#" />
+                </Link>
+
               </div>
             </NavLink>
           </div>

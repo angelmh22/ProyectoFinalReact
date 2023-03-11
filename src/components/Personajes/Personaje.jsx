@@ -1,28 +1,41 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable react/react-in-jsx-scope */
 import { useParams } from 'react-router-dom';
-import { getInvoices } from '../../services/datos';
+import { getPersonaje } from '../../services/personajes';
+
+export async function loader({ params }) {
+  const character = getPersonaje(params.getPersonajeId);
+  if (!character) {
+    throw new Response('', {
+      status: 404,
+      statusText: 'Not Found',
+    });
+  }
+  return character;
+}
 
 export default function Personaje() {
-  const params = useParams();
-  const character = getInvoices(parseInt(params.invoiceId, 10));
+  const character = useParams();
+
   return (
     <main>
-      <h2>
-        Total Due:
-        {' '}
-        {character._id}
+      <h2 id="carac-personaje">
+        Características del personaje
       </h2>
-      <p>
-        {character.name}
-        :
-        {' '}
-        {character.imageUrl}
-      </p>
-      <p>
-        Due Date:
-        {' '}
-        {character._id}
+      <p id="c-personaje">
+        <p>
+          - Nombre:
+          {' '}
+          {`${character._id}`}
+        </p>
+        <p>
+          - Película en la que sale:
+          {' '}
+          {`${character.films}`}
+        </p>
+
+        {`${character.name}`}
+        {`${character.imageUrl}`}
       </p>
     </main>
   );
